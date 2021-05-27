@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@drawable/fruit"
+    android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+    android:id="@+id/linear"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:text="Fruits Management"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/fruitName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter Fruit"
+    app:boxStrokeWidth="2dp"
+    app:boxStrokeWidthFocused="1dp"
+    app:boxStrokeColor="@color/yellow"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fruitPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Price"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeWidthFocused="1dp"
+        app:boxStrokeColor="@color/yellow"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/selectQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select Quantity"
+        android:layout_marginTop="10dp"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeWidthFocused="1dp"
+        app:boxStrokeColor="@color/yellow"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fruit_tv"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:text="Add Data"
+        android:layout_marginTop="16dp"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:onClick="addData"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:id="@+id/GalleryImgBtn"
+        />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Table"
+    android:textSize="25sp"
+    android:layout_gravity="center"
+    android:layout_marginTop="25sp"
+    android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_fruit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+</LinearLayout>
